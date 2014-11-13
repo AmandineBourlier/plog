@@ -1,11 +1,19 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
+
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
+
+# Sinatra Reloader
+gem 'sinatra-reloader'
+
+gem 'sinatra-authentication'
 
 gem 'sinatra'
 gem 'thin'
-gem 'rerun'
+gem 'data_mapper'
+gem 'dm-sqlite-adapter'
 group :development do
-  gem 'pry'
+ gem 'pry'
+ gem 'better_errors'
 end
-

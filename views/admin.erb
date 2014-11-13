@@ -1,0 +1,23 @@
+<h1>Bonjour !</h1>
+<form action="/admin" class="form-inline" method="post">
+  <label for="choix">Veuillez insérer votre log en sélectionnant votre prénom:</label>
+  <input type="text" placeholder="ajout du log" name="message" required="required">
+  <br /><br />
+   <select name="author" id="choix">
+       <option value="Amandine">Amandine</option>
+       <option value="Remy">Remy</option>
+       <option value="Micka">Micka</option>
+   </select>
+  <button type="submit" class="btn">Envoyer</button>
+</form>
+
+<% @logs.each do |log| %>
+	 <h3><%= log.author %></h3>
+	 <p><%= log.message %></p>
+   <span class="pull-right">
+  <a href="/delete/<%= log[:id] %>" class="btn btn-danger">Supprimer</a>
+  <a href="/modify/<%= log[:id] %>" class="btn btn-danger">Modifier</a>
+  </span>
+<% end %>
+<br /><br />
+<a href="/accueil">Retour à la page d'identification </a>

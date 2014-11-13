@@ -1,48 +1,129 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    celluloid (0.16.0)
-      timers (~> 4.0.0)
+    addressable (2.3.6)
+    backports (3.6.3)
+    bcrypt (3.1.9)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
+    better_errors (2.0.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     coderay (1.1.0)
     daemons (1.1.9)
+    data_mapper (1.2.0)
+      dm-aggregates (~> 1.2.0)
+      dm-constraints (~> 1.2.0)
+      dm-core (~> 1.2.0)
+      dm-migrations (~> 1.2.0)
+      dm-serializer (~> 1.2.0)
+      dm-timestamps (~> 1.2.0)
+      dm-transactions (~> 1.2.0)
+      dm-types (~> 1.2.0)
+      dm-validations (~> 1.2.0)
+    data_objects (0.10.14)
+      addressable (~> 2.1)
+    dm-aggregates (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-constraints (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-core (1.2.1)
+      addressable (~> 2.3)
+    dm-do-adapter (1.2.0)
+      data_objects (~> 0.10.6)
+      dm-core (~> 1.2.0)
+    dm-migrations (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-serializer (1.2.2)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      json_pure (~> 1.6)
+      multi_json (~> 1.0)
+    dm-sqlite-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_sqlite3 (~> 0.10.6)
+    dm-timestamps (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-transactions (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-types (1.2.2)
+      bcrypt-ruby (~> 3.0)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      multi_json (~> 1.0)
+      stringex (~> 1.4)
+      uuidtools (~> 2.1)
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
+    do_sqlite3 (0.10.14)
+      data_objects (= 0.10.14)
+    erubis (2.7.0)
     eventmachine (1.0.3)
-    ffi (1.9.6)
-    hitimes (1.2.2)
-    listen (2.7.11)
-      celluloid (>= 0.15.2)
-      rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9)
+    fastercsv (1.5.5)
+    json (1.8.1)
+    json_pure (1.8.1)
     method_source (0.8.2)
+    multi_json (1.10.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.5.2)
+    rack-flash (0.1.2)
+      rack
     rack-protection (1.5.3)
       rack
-    rb-fsevent (0.9.4)
-    rb-inotify (0.9.5)
-      ffi (>= 0.5.0)
-    rerun (0.10.0)
-      listen (~> 2.7, >= 2.7.3)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rufus-tokyo (1.0.7)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    sinatra-authentication (0.4.1)
+      dm-core
+      dm-migrations
+      dm-timestamps
+      dm-validations
+      rack-flash
+      rufus-tokyo
+      sinatra
+      sinbook
+    sinatra-contrib (1.4.2)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
+      tilt (~> 1.3)
+    sinatra-reloader (1.0)
+      sinatra-contrib
+    sinbook (0.1.9)
+      yajl-ruby
     slop (3.6.0)
+    sqlite3 (1.3.10)
+    stringex (1.5.1)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
       rack (~> 1.0)
     tilt (1.4.1)
-    timers (4.0.1)
-      hitimes
+    uuidtools (2.1.5)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  data_mapper
+  dm-sqlite-adapter
   pry
-  rerun
   sinatra
+  sinatra-authentication
+  sinatra-reloader
+  sqlite3
   thin

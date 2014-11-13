@@ -1,0 +1,10 @@
+  <p>Modifier votre log?</p>
+<blockquote><p><%= @log.message %></p></blockquote>
+
+<form action="/modify/<%= @log.id %>" method="post">
+<input name="_method" type="hidden" value="modify" />
+<input type="text" placeholder="ajout du texte" name="message" required="required">
+  <button type="submit" class="btn btn-primary" name="ok">OK</button>
+  <button type="submit" class="btn" name="cancel">Annuler</button>
+</form>
+

@@ -1,0 +1,7 @@
+<h1>LISTE DES LOGS</h1>
+<% @logs.each do |log| %>
+ <h3><%= log.author %></h3>
+ <p><%= log.message %></p>
+<% end %>
+<br /><br />
+<a href="/accueil">Retour à la page d'identification </a>
