@@ -50,7 +50,7 @@ post '/admin' do
 redirect '/admin'
 end
 
-
+# Delete a log
 get '/delete/:id' do
   @log = Log.first(:id => params[:id])
   erb :delete
@@ -66,6 +66,7 @@ delete '/delete/:id' do
   end
 end
 
+# Modify a log
 get '/modify/:id' do
   @log = Log.first(:id => params[:id])
   erb :modify
@@ -79,16 +80,22 @@ post '/modify/:id' do
   redirect '/admin'
 end
 
+# Load the home page
 get '/accueil' do
   erb :accueil
 end
 
+get '/' do
+  redirect '/accueil'
+end
+
+# Page to visitor
 get '/visiteur' do
   @logs = Log.all(:order => [ :id.desc], :limit => 10)
   erb :visiteur
 end
 
-# essai d'identification administrateur
+# Authentification for administrator
 set :username, 'amandine'
 set :password, 'roxy'
 set :token, 'amandineroxy'
