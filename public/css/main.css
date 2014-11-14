@@ -1,0 +1,63 @@
+body {
+	background-color: #FFFFFF;
+}
+
+p {
+	font-size: 16px;
+	color: #333331;
+}
+
+/*------------------------------------
+		Page accueil
+--------------------------------------*/
+.accueil {
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+.accueil h1 {
+	color: #34495E;
+	padding-top: 30px;
+	font-size: 100px;
+}
+
+.description {
+	font-size: 18px;
+	padding-bottom: 40px;
+}
+
+/*------------------------------------
+		Page visiteur
+--------------------------------------*/
+.section-visiteur {
+
+}
+
+.section-visiteur h3 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.titre-visiteur {
+	text-align: center;
+}
+
+.retour-accueil {
+	text-align: center;
+}
+
+/*------------------------------------
+		Page identification
+--------------------------------------*/
+.section-identification h2 {
+	font-size: 18px;
+	text-align: center;
+}
+
+.section-identification {
+	padding-top: 40px;
+}
+
+label {
+	width: 130px;
+}

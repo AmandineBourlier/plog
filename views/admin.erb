@@ -14,7 +14,7 @@
 <% @logs.each do |log| %>
 	 <h3><%= log.author %></h3>
 	 <p><%= log.message %></p>
-   <span class="pull-right">
+   <span>
   <a href="/delete/<%= log[:id] %>" class="btn btn-danger">Supprimer</a>
   <a href="/modify/<%= log[:id] %>" class="btn btn-danger">Modifier</a>
   </span>

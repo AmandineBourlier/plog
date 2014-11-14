@@ -1,7 +1,30 @@
-<h1>LISTE DES LOGS</h1>
-<% @logs.each do |log| %>
- <h3><%= log.author %></h3>
- <p><%= log.message %></p>
-<% end %>
-<br /><br />
-<a href="/accueil">Retour à la page d'identification </a>
+<div class="container">
+	<div class="section-visiteur">
+	
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="titre-visiteur">
+					<h1>LISTE DES LOGS</h1>
+				</div>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<% @logs.each do |log| %>
+				 <h3><%= log.author %></h3>
+				 <p><%= log.message %></p>
+				<% end %>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="retour-accueil">
+					<a href="/accueil">Retourner à la page d'accueil</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
