@@ -1,5 +1,5 @@
 body {
-	background-color: #FFFFFF;
+	background-color: #24334C;
 }
 
 p {
@@ -13,6 +13,11 @@ p {
 .accueil {
 	background-color: #FFFFFF;
 	text-align: center;
+	margin-top: 100px;
+}
+
+.btn_acc {
+	margin-bottom: 20px;
 }
 
 .accueil h1 {
@@ -24,13 +29,20 @@ p {
 .description {
 	font-size: 18px;
 	padding-bottom: 40px;
+	font-style: italic;
 }
 
 /*------------------------------------
 		Page visiteur
 --------------------------------------*/
 .section-visiteur {
+	margin-top: 15px;
+	background-color: #FFFFFF;
+	padding: 10px;
+}
 
+.section-visiteur h1 {
+	text-align: center;
 }
 
 .section-visiteur h3 {
@@ -49,15 +61,30 @@ p {
 /*------------------------------------
 		Page identification
 --------------------------------------*/
-.section-identification h2 {
-	font-size: 18px;
-	text-align: center;
-}
-
 .section-identification {
-	padding-top: 40px;
+	margin-top: 100px;
+	background-color: #FFFFFF;
 }
 
-label {
-	width: 130px;
+.section-identification h2 {
+	font-size: 31px;
+	text-align: center;
+	margin-bottom: 26px;
+}
+
+.retour-accueil {
+	margin-bottom: 10px;
+}
+
+.formulaire {
+	width: 200px;
+	margin: auto;
+}
+
+.btn-connexion {
+	display: block;
+	width: auto;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }

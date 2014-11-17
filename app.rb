@@ -108,9 +108,6 @@ post '/identification' do
   if params['username'] == settings.username && params['password'] == settings.password
     response.set_cookie(settings.username,settings.token)
     redirect '/admin'
-  elsif params['username'] != settings.username && params['password'] != settings.password
-    "code utilisateur ou mot de passe incorrect"
-  elsif redirect '/identification'
   else
     redirect '/accueil'
   end

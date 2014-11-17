@@ -1,31 +1,22 @@
 <div class="container">
-	<div class="section-identification">
-
-		<div class="row">
-			<h2>Se connecter</h2>
-		</div>
-
-		<div class="row">
-			<div class="col-md-5 col-md-offset-4">
-				<form action="/identification" method="post">
-				<label for="username">Login:</label>
-				<input type="text" name="username">
-				<br></br>
-				<label for="password">Mot de passe:</label>
-				<input type="password" name="password">
-				<input type="submit" value="connexion">
-				</form>
+	<div class="col-md-6 col-md-offset-3">
+		<div class="section-identification">
+			<div class="row">
+				<h2>Se connecter</h2>
+					<form class="formulaire" action="/identification" method="post">
+					<label for="username">Login:</label>
+					<input type="text" name="username">
+					<br></br>
+					<label for="password">Mot de passe:</label>
+					<input type="password" name="password">
+					<input class="btn-connexion" type="submit" value="connexion">
+					</form>
 			</div>
-		</div>
-
-
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
+			<div class="row">
 				<div class="retour-accueil">
 					<a href="/accueil">Retourner à la page d'accueil</a>
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
